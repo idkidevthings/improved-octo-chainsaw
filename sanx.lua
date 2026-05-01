@@ -23,8 +23,7 @@ elseif chance > 25 and chance <= 50 then
 
     -- Test 2: JumpPower
     task.spawn(function()
-        task.wait(4)
-        print("TEST 2: Setting JumpPower to 200")
+        task.wait(2)
         if LP.Character and LP.Character:FindFirstChild("Humanoid") then
             LP.Character.Humanoid.JumpPower = 200
         end
@@ -32,8 +31,7 @@ elseif chance > 25 and chance <= 50 then
 
     -- Test 3: Noclip
     task.spawn(function()
-        task.wait(6)
-        print("TEST 3: Enabling noclip")
+        task.wait(2)
         if LP.Character then
             for _, part in ipairs(LP.Character:GetDescendants()) do
                 if part:IsA("BasePart") then
@@ -45,13 +43,13 @@ elseif chance > 25 and chance <= 50 then
 
     -- Test 8: MaxHealth
     task.spawn(function()
-        task.wait(16)
+        task.wait(2)
         if LP.Character and LP.Character:FindFirstChild("Humanoid") then
             LP.Character.Humanoid.MaxHealth = 9999
         end
     end)
-
-    task.wait(20)
+    print("SanX Failed to load _G.SanX is already True please rejoin")
+    task.wait(4)
     LP:Kick("Antiban Reason: HardHack|_G.SanX")
 
 else
